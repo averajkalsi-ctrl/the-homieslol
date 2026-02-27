@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Homies</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c1c);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Animated Gradient */
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Logo */
+.logo {
+    margin-top: 60px;
+}
+
+.logo h1 {
+    font-size: 60px;
+    letter-spacing: 6px;
+}
+
+.logo span {
+    color: #00e0ff;
+}
+
+/* Music Button */
+.music-btn {
+    margin-top: 20px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    background: #00e0ff;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    max-width: 1200px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 220px;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: rgba(255,255,255,0.2);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    padding: 20px;
+    opacity: 0.7;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="logo">
+    <h1>THE <span>HOMIES</span></h1>
+    <p>Real ones. Real vibes. Forever squad.</p>
+</div>
+
+<button class="music-btn" onclick="playMusic()">Play FE!N 🔥</button>
+
+<audio id="bgMusic" loop>
+    <source src="fein.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <div class="card">
+        <h2>Cormac</h2>
+        <p>Certified legend. Brings the energy.</p>
+    </div>
+
+    <div class="card">
+        <h2>Prabhveer</h2>
+        <p>Smart, chill, always plotting.</p>
+    </div>
+
+    <div class="card">
+        <h2>Yameen</h2>
+        <p>Quiet but dangerous.</p>
+    </div>
+
+    <div class="card">
+        <h2>Avi</h2>
+        <p>Always laughing. Always vibing.</p>
+    </div>
+
+    <div class="card">
+        <h2>Averaj</h2>
+        <p>Main character energy.</p>
+    </div>
+</div>
+
+<div class="footer">
+© 2026 The Homies | Edmonton Squad
+</div>
+
+<script>
+function playMusic() {
+    document.getElementById("bgMusic").play();
+}
+</script>
+
+</body>
+</html>
